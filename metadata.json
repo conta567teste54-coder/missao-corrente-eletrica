@@ -1,0 +1,6 @@
+{
+  "name": "Missão Corrente Elétrica",
+  "description": "Um jogo educativo de plataforma 2D onde Albert Einstein viaja pela Vila dos Elétrons e resolve desafios sobre a corrente elétrica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
