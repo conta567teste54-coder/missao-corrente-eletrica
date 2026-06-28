@@ -1261,7 +1261,7 @@ export default function App() {
 
               <div className="flex items-center gap-4 bg-indigo-950/40 p-3.5 rounded-2xl border border-[#4338CA]/30 relative z-10">
                 <img
-                  src="/pwa-icon.jpg"
+                  src="pwa-icon.jpg"
                   alt="Missão Corrente Elétrica Icon"
                   className="w-16 h-16 rounded-xl border-2 border-cyan-400/80 shadow-md shadow-cyan-950"
                   referrerPolicy="no-referrer"

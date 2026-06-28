@@ -1,9 +1,9 @@
 const CACHE_NAME = 'missao-corrente-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/pwa-icon.jpg'
+  './',
+  'index.html',
+  'manifest.json',
+  'pwa-icon.jpg'
 ];
 
 // Install Event
@@ -74,7 +74,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         // Offline Fallback for SPA routing/index.html
         if (event.request.mode === 'navigate') {
-          return caches.match('/');
+          return caches.match('index.html') || caches.match('./');
         }
       });
     })
