@@ -393,7 +393,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-8 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
+            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-8 py-10 sm:py-16 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
           >
             {/* Upper sound toggle indicator */}
             <div className="absolute top-6 right-6 flex items-center gap-3">
@@ -406,7 +406,7 @@ export default function App() {
               </button>
             </div>
 
-            <div className="w-full max-w-4xl flex flex-col items-center text-center space-y-6 py-5">
+            <div className="w-full max-w-4xl my-auto flex flex-col items-center text-center space-y-6 py-5">
               
               {/* Animated Game Logo Banner */}
               <motion.div
@@ -1026,9 +1026,9 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
+            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-8 py-10 sm:py-16 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
           >
-            <div className="w-full max-w-3xl bg-[#312E81]/85 border-2 border-[#4338CA] rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden space-y-6 backdrop-blur-md">
+            <div className="w-full max-w-3xl my-auto bg-[#312E81]/85 border-2 border-[#4338CA] rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden space-y-6 backdrop-blur-md">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#00e5ff] to-pink-500" />
 
               <div className="text-center space-y-2">
@@ -1078,9 +1078,9 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 bg-gradient-to-b from-[#18153e] via-[#1E1B4B] to-[#120f30] overflow-y-auto"
+            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-6 py-10 sm:py-16 bg-gradient-to-b from-[#18153e] via-[#1E1B4B] to-[#120f30] overflow-y-auto"
           >
-            <div className="w-full max-w-3xl bg-[#312E81] border-2 border-[#4338CA] rounded-3xl p-5 sm:p-8 shadow-2xl shadow-indigo-900/50 relative overflow-hidden space-y-6 backdrop-blur-md my-4">
+            <div className="w-full max-w-3xl my-auto bg-[#312E81] border-2 border-[#4338CA] rounded-3xl p-5 sm:p-8 shadow-2xl shadow-indigo-900/50 relative overflow-hidden space-y-6 backdrop-blur-md my-4">
               
               {/* Vibrant glowing top line */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-pink-500 via-yellow-500 to-cyan-500 animate-pulse" />
