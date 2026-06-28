@@ -393,20 +393,21 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-8 py-10 sm:py-16 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
+            className="absolute inset-0 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
           >
-            {/* Upper sound toggle indicator */}
-            <div className="absolute top-6 right-6 flex items-center gap-3">
-              <button
-                onClick={handleToggleAudio}
-                className="p-3 rounded-xl bg-[#312E81]/80 border border-[#4338CA] hover:border-pink-500 text-indigo-200 hover:text-white transition-all flex items-center justify-center shadow-lg shadow-indigo-950/50 cursor-pointer"
-                title={audioEnabled ? "Desativar Sons" : "Ativar Sons"}
-              >
-                {audioEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5 text-pink-400 animate-pulse" />}
-              </button>
-            </div>
+            <div className="min-h-full w-full flex flex-col items-center justify-center p-4 sm:p-8 py-10 sm:py-16 relative">
+              {/* Upper sound toggle indicator */}
+              <div className="absolute top-6 right-6 flex items-center gap-3">
+                <button
+                  onClick={handleToggleAudio}
+                  className="p-3 rounded-xl bg-[#312E81]/80 border border-[#4338CA] hover:border-pink-500 text-indigo-200 hover:text-white transition-all flex items-center justify-center shadow-lg shadow-indigo-950/50 cursor-pointer"
+                  title={audioEnabled ? "Desativar Sons" : "Ativar Sons"}
+                >
+                  {audioEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5 text-pink-400 animate-pulse" />}
+                </button>
+              </div>
 
-            <div className="w-full max-w-4xl my-auto flex flex-col items-center text-center space-y-6 py-5">
+              <div className="w-full max-w-4xl flex flex-col items-center text-center space-y-6 py-5">
               
               {/* Animated Game Logo Banner */}
               <motion.div
@@ -636,8 +637,9 @@ export default function App() {
                 </div>
               </motion.div>
             </div>
-          </motion.div>
-        )}
+          </div>
+        </motion.div>
+      )}
 
         {/* 2. GAMEPLAY LAYOUT ON TOP */}
         {gameState === 'PLAYING' && (
@@ -810,7 +812,7 @@ export default function App() {
             ) : (
               <>
                 {/* Battle Arena */}
-                <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-auto py-2 z-10">
+                <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-4 md:my-8 py-2 z-10">
                   
                   {/* Left Fighter: Einstein with Positive Proton Rod */}
                   <motion.div
@@ -1026,9 +1028,10 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-8 py-10 sm:py-16 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
+            className="absolute inset-0 overflow-y-auto bg-gradient-to-b from-[#1b193f] via-[#1E1B4B] to-[#121030]"
           >
-            <div className="w-full max-w-3xl my-auto bg-[#312E81]/85 border-2 border-[#4338CA] rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden space-y-6 backdrop-blur-md">
+            <div className="min-h-full w-full flex flex-col items-center justify-center p-4 sm:p-8 py-10 sm:py-16">
+              <div className="w-full max-w-3xl bg-[#312E81]/85 border-2 border-[#4338CA] rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden space-y-6 backdrop-blur-md">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#00e5ff] to-pink-500" />
 
               <div className="text-center space-y-2">
@@ -1068,8 +1071,9 @@ export default function App() {
               </div>
 
             </div>
-          </motion.div>
-        )}
+          </div>
+        </motion.div>
+      )}
 
         {/* 5. VICTORY RECAP SUMMARY SCREEN */}
         {gameState === 'VICTORY' && (
@@ -1078,9 +1082,10 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-start p-4 sm:p-6 py-10 sm:py-16 bg-gradient-to-b from-[#18153e] via-[#1E1B4B] to-[#120f30] overflow-y-auto"
+            className="absolute inset-0 overflow-y-auto bg-gradient-to-b from-[#18153e] via-[#1E1B4B] to-[#120f30]"
           >
-            <div className="w-full max-w-3xl my-auto bg-[#312E81] border-2 border-[#4338CA] rounded-3xl p-5 sm:p-8 shadow-2xl shadow-indigo-900/50 relative overflow-hidden space-y-6 backdrop-blur-md my-4">
+            <div className="min-h-full w-full flex flex-col items-center justify-center p-4 sm:p-6 py-10 sm:py-16">
+              <div className="w-full max-w-3xl bg-[#312E81] border-2 border-[#4338CA] rounded-3xl p-5 sm:p-8 shadow-2xl shadow-indigo-900/50 relative overflow-hidden space-y-6 backdrop-blur-md my-4">
               
               {/* Vibrant glowing top line */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-pink-500 via-yellow-500 to-cyan-500 animate-pulse" />
@@ -1231,8 +1236,9 @@ export default function App() {
               </div>
 
             </div>
-          </motion.div>
-        )}
+          </div>
+        </motion.div>
+      )}
 
         {/* PWA Installation Desktop Guidance Modal */}
         {showPwaInstallModal && (
