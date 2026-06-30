@@ -1197,6 +1197,13 @@ export default function App() {
                     </table>
                   </div>
                 )}
+                
+                {/* Credit near the list of players */}
+                <div className="pt-2.5 border-t border-[#4338CA]/30 text-center">
+                  <p className="text-[11px] text-pink-300 font-mono font-bold tracking-wider">
+                     ⚡ Jogo produzido por Lara Aliprandi Loureiro ⚡
+                  </p>
+                </div>
               </div>
 
               {/* Scientific physics recap summary checklist */}
@@ -1233,6 +1240,13 @@ export default function App() {
                   <Award className="w-4 h-4 text-white animate-pulse" />
                   Jogar com Novo Nickname
                 </button>
+              </div>
+
+              {/* Game Credit Footer */}
+              <div className="border-t border-[#4338CA]/30 pt-4 mt-2 text-center">
+                <p className="text-xs text-yellow-300 font-mono font-bold tracking-widest uppercase animate-pulse">
+                  🎬 Jogo produzido por Lara Aliprandi Loureiro
+                </p>
               </div>
 
             </div>
